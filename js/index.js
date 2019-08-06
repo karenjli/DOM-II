@@ -5,11 +5,15 @@ headline.addEventListener ("dblclick", (e) => alert("Welcome to Fun Bus"));
 const welcome = document.querySelector (".container .intro h2");
 welcome.addEventListener('click', (e) => console.log ("Welcome"));
 
+const logo = document.querySelector (".main-navigation .container h1");
+logo.addEventListener('mouseover', (e) => logo.style.color = "hotpink");
+
 const subheading = document.querySelectorAll (".content-section h2");
 console.log(subheading);
 subheading.forEach (subheading => {
     subheading.addEventListener('click', (e) => subheading.style.color = "yellow");
 }) 
+
 
 // const page = document.querySelectorAll ("body");
 // page.addEventListener('keydown', (e) => page.style.backgroundColor = "blue");
