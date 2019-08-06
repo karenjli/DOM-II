@@ -22,3 +22,26 @@ window.addEventListener('resize', (e) => {console.log ("The window is resized")}
 const button = document.querySelectorAll ('.btn')
 button.forEach ( button => {
     addEventListener('scroll', (e)=> {button.style.borderColor = "pink"})});
+
+const headerImg = document.querySelector(".container .intro img");
+let scale = 1;
+headerImg.addEventListener ('wheel', function zoom(event) {
+      event.preventDefault();
+    
+      scale += event.deltaY * -0.01;
+    
+      // Restrict scale
+      scale = Math.min(Math.max(.125, scale), 4);
+    
+      // Apply scale transform
+      headerImg.style.transform = `scale(${scale})`;
+    });
+
+const action = document.querySelector (".content-pick .destination h4");
+action.addEventListener ('click', (e) => console.log ("Client is interested in sunny places"));
+
+const action2 = document.querySelector(".content-pick .destination:nth-child(2) h4");
+action2.addEventListener ('click', (e) => console.log ("Client is interested in the mountains"));
+
+const action3 = document.querySelector(".content-pick .destination:nth-child(3) h4");
+action3.addEventListener ('click', (e) => console.log ("Client is interested in islands"));
