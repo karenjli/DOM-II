@@ -71,11 +71,16 @@ release.addEventListener ('keyup', (e) => {
 
 const navTags = document.querySelectorAll ('nav a');
 console.log(navTags);
-navTags.forEach (nav => 
+navTags.forEach (nav => {
+    nav.addEventListener ('click', (e) => {
+        e.preventDefault() });
+
     nav.addEventListener ('contextmenu', (e) => {
-    e.preventDefault();
     alert ("None of the links are working. Sorry!");
-}));
+     })
+    });
+
+
 
 const paragraph = document.querySelectorAll ('p');
 paragraph.forEach (paragraph => {
